@@ -1,0 +1,48 @@
+#formDiv {
+    background-color: black;
+    margin-left: 5vw;
+    padding-bottom: 3vh;
+    width: 90vw;
+    min-height: 80vh;
+    height: fit-content;
+    border-radius: 5px;
+
+    h1 {
+        color: white;
+        text-align: center;
+        padding-top: 2vh;
+    }
+
+    fieldset {
+        display: grid;
+        position: relative;
+        text-align: center;
+        gap: 2vh;
+        margin: 0;
+        padding: 0;
+        border: 0;
+
+        label {
+            color: white;
+            font-size: 21px;
+        }
+
+        input{
+            width: 20vw;
+            height: 3vh;
+            margin: auto;
+            margin-bottom: 3vh;
+        }
+
+    }
+}
+
+input[type="file"]{
+    color: white;
+}
+
+#enviarBT{
+    width: 7vw !important;
+    height: 5vh !important;
+    margin-top: 1vh !important;
+}

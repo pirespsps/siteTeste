@@ -1,0 +1,132 @@
+body{
+    margin:0;
+    padding: 0;
+}
+
+#headerFundo{
+    background-color: black;
+    color: white;
+    max-height: 9.47vh;
+        ul{
+            display: inline-flex;
+            list-style-type: none;
+            margin: 0;
+            padding-left: 4vw;
+                li{
+                    text-align: center;
+                    font-size: 25px;
+                    text-decoration: none;
+                    color: white;
+                    transition: all 0.3s ease;
+                    padding: 2vh 2vw 2.5vh 2vw;
+                }
+        }
+}
+
+#divMenuCriar{
+    display: none;
+    ul{
+        position: absolute;
+        display: grid;
+        margin-top: 2.3vh;
+        margin-left: -2vw;
+        padding: 0;
+        background-color: rgb(56, 56, 56);
+        border-radius: 0 0 3px 3px;
+        li{
+            text-align: left;
+            font-size: 18px;
+            padding: 0.6vh 3vw 1.2vh 1vw;
+            max-width: 15vw;
+        }
+    }
+}
+
+#criar:hover #divMenuCriar{
+    display: grid;
+}
+
+#divMenuLista{
+    display: none;
+    ul{
+        position: absolute;
+        display: grid;
+        margin-top: 2.3vh;
+        margin-left: -2vw;
+        padding: 0;
+        background-color: rgb(56, 56, 56);
+        border-radius: 0 0 3px 3px;
+        li{
+            text-align: left;
+            font-size: 18px;
+            padding: 0.6vh 3vw 1.2vh 1vw;
+            max-width: 15vw;
+        }
+    }
+}
+
+#list:hover #divMenuLista{
+    display: grid;
+}
+
+
+.menuItem:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+#iconDagon{
+    position: absolute;
+    height: 7.5vh;
+    width: 3.5vw;
+    margin-top: 1vh;
+    margin-left: 0.3vw;
+}
+
+.linkHeader{
+    color: white;
+    text-decoration: none;
+}
+
+.optionHeader:hover{
+    background-color: rgb(56, 56, 56);
+    cursor: pointer;
+}
+
+/* ------------------- */
+
+#savedPopUp{
+    background-color:rgb(56, 56, 56);
+    position:fixed;
+    text-align:center;
+    top:5vh;
+    left:69vw;
+    width:30vw;
+    border: 1px solid white;
+    border-radius: 5px;
+    animation: rise 0.5s forwards, disappear 0.25s forwards 3.5s;
+        h1{
+            color: white;
+        }
+}
+
+
+@keyframes rise{
+    from{
+        top: 100vh;
+    }
+    to{
+        top: 5vh;
+    }
+}
+
+@keyframes disappear{
+    from{
+        left: 69vw;
+        opacity: 1;
+    }
+    to{
+        left: 100vw;
+        opacity: 0;
+    }
+}

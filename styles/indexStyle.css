@@ -1,0 +1,78 @@
+.section{
+    display: flex;
+    gap: 0.5vw;
+    background-color: rgb(24,26,24);
+    padding: 1.5vh 1.5vw;
+    max-height: 36vh;
+}
+
+.sectionHead{
+    display:inline-flex;
+    margin-top:3vh;
+    h2{
+        font-size: 28px;
+        margin: 0 0 0 0.5vw;
+        padding: 0;
+        font-family: Creep-wood;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.sectionLink:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.card{
+    background-color: rgb(24, 26, 24);
+    width: fit-content;
+    padding: 0.5vh 1vw 0.3vh 1vw;
+    border-radius: 3px;
+    transition:0.3s ease
+}
+
+.disco{
+    height: 25vh;
+    width: 11.5vw;
+    max-height: 25vh;
+    max-width: 11.5vw;
+    object-fit: fill;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.nomeDisco{
+    color: white;
+    width: 11vw;
+    overflow-x: hidden;
+    text-align: center;
+    font-family: Burst-Hydra-Font;
+    font-size: 12px;
+}
+
+.disco:hover{
+    animation: spin 10s infinite linear;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: Burst-Hydra-Font;
+    src: url(../assets/fonts/burst-hydra/BurstHydra-Regular.ttf);
+}
+
+@font-face {
+    font-family: Creep-Wood;
+    src: url(../assets/fonts/creepwood/Creepwood.otf);
+}
+
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
