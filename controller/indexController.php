@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/../config/config.php";
 require_once __DIR__ . "/../config/functions.php";
-require_once __DIR__ . "/../config/DataBaseAcess.php";
+require_once __DIR__ . "/../config/DataBaseAccess.php";
 
 require_once __DIR__ . "/../model/disco/Disco.php";
 require_once __DIR__ . "/../model/disco/DiscoDAO.php";
@@ -15,18 +15,23 @@ require_once __DIR__ . "/../global/footer.php";
 // functions
 
 function renderCardDisco(){
-    $dao = new DiscoDAO(DatabaseAcess::getPDO());
+    $dao = new DiscoDAO(DatabaseAccess::getPDO());
 
     foreach($dao->readLastX(10) as $fetch){
         $obj = Disco::fill($fetch);
         
         $path = str_replace(BASE_URL,"",$obj->getPath_img());
         $nome = ucfirst($obj->getTitulo());
+        $id = $obj->getId();
+
+        echo "<a href='inspect/disco?id=$id'>";
 
         echo "<div class='card'>";
         echo "<img class='disco' src='$path'>";
         echo "<p class='nomeDisco'>$nome</p>";
         echo "</div>";
+
+        echo "</a>";
 
     }
 

@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/../../config/config.php";
 require_once __DIR__ . "/../../config/functions.php";
-require_once __DIR__ . "/../../config/DataBaseAcess.php";
+require_once __DIR__ . "/../../config/DataBaseAccess.php";
 
 require_once __DIR__ . "/../../model/disco/Disco.php";
 require_once __DIR__ . "/../../model/disco/DiscoDAO.php";
@@ -9,7 +9,7 @@ require_once __DIR__ . "/../../global/Popup.php";
 
 renderHead("Criar Disco","../styles/createStyle.css");
 require_once __DIR__ . "/../../global/header.php";
-require_once __DIR__ . "/../../view/create/createDisco.php";
+require_once __DIR__ . "/../../view/disco/createDisco.php";
 require_once __DIR__ . "/../../global/footer.php";
 
 //
@@ -23,7 +23,7 @@ if(isset($_POST['nomeDisco']) && isset($_FILES['fileDisco'])){
 //functions 
 
 function save(){
-    $dao = new DiscoDAO(DatabaseAcess::getPDO());
+    $dao = new DiscoDAO(DatabaseAccess::getPDO());
     $obj = new Disco();
 
     $nome_disco = trim(htmlspecialchars($_POST['nomeDisco']));

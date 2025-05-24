@@ -9,3 +9,7 @@ path_img VARCHAR(255),
 
 CONSTRAINT pk_tbDisco PRIMARY KEY (id)
 );
+
+-- insert 
+
+INSERT INTO tbDisco(titulo, path_img) VALUES ("Storm of the lights bane", "assets/images/discos/stormofthelightsbane.png"); 

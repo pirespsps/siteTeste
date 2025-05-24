@@ -32,7 +32,7 @@
                         </div>
                 </li>
             
-                    <li id="criar" class="optionHeader"><a class="linkHeader" href="<?= BASE_URL ?>list">Criar</a>                        <div id="divMenuCriar">
+                    <li id="criar" class="optionHeader"><a class="linkHeader" href="<?= BASE_URL ?>create">Criar</a>                        <div id="divMenuCriar">
                             <ul>
                                 <a class="linkHeader" href="<?= BASE_URL ?>create/disco">
                                     <li class="menuItem">Criar Discos</li>

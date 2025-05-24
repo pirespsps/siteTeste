@@ -1,6 +1,6 @@
 <?php
 
-class DatabaseAcess{
+class DatabaseAccess{
 
     public static ?PDO $pdo = null;
 

@@ -1,0 +1,31 @@
+.backgroundCard{
+    height: fit-content;
+    width: 70vw;
+    padding: 3vh 0vw;
+    margin: 3vh 0vw 0vh 15vw; 
+    background-color:  black;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+        h1{
+            margin: 0;
+            font-size: 40px;
+            font-family: metal-gothic;
+            letter-spacing: 0.5px;
+        }
+
+        img{
+            margin-top: 2vh;
+            height: 45vh;
+            width: 40vw;
+            object-fit: fill;
+            border-radius: 2px;
+            background-color: rgb(56, 56, 56);
+            padding: 5px;
+        }
+}
+
+@font-face {
+    font-family: metal-gothic;
+    src: url(../assets/fonts/metal-gothic-font/MetalGothicDemoVersionRegular-WyB9A.ttf);
+}

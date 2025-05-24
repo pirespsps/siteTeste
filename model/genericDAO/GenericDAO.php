@@ -13,6 +13,8 @@ abstract class GenericDAO{
     public abstract function update($obj);
 
     public abstract function delete($obj);
+
+    public abstract function searchById($id);
     
 
 }

@@ -54,5 +54,14 @@ class DiscoDAO extends GenericDAO{
         return $query;
 
     }
+    public function searchById($id){
+
+        $sql = $this->pdo->prepare("SELECT * FROM tbDisco WHERE id = ? ");
+        $sql->execute([$id]);
+        $query = $sql->fetch(PDO::FETCH_ASSOC);
+        $sql->closeCursor();
+
+        return $query;
+    }
 
 }
