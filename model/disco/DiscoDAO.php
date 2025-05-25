@@ -10,8 +10,8 @@ class DiscoDAO extends GenericDAO{
 
     public function create($obj){
 
-        $sql = $this->pdo->prepare("INSERT INTO tbDisco (titulo,path_img) VALUES (?,?)");
-        $sql->execute([$obj->getTitulo(),$obj->getPath_img()]);
+        $sql = $this->pdo->prepare("INSERT INTO tbDisco (titulo,banda,ano,path_img) VALUES (?,?,?,?)");
+        $sql->execute([$obj->getTitulo(),$obj->getBanda(),$obj->getAno(),$obj->getPath_img()]);
         $sql->closeCursor();
 
     }
@@ -20,17 +20,22 @@ class DiscoDAO extends GenericDAO{
 
         $sql = $this->pdo->prepare("SELECT * FROM tbDisco");
         $sql->execute();
-        $query = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $fetch = $sql->fetchAll(PDO::FETCH_ASSOC);
         $sql->closeCursor();
 
-        return $query;
+        $fetchObj = [];
+        foreach($fetch as $ar){
+            array_push($fetchObj,Disco::fill($ar));
+        }
+
+        return $fetchObj;
 
     }
 
     public function update($obj){
 
-        $sql = $this->pdo->prepare("UPDATE tbDisco SET titulo = ?, path_img = ? WHERE id = ?");
-        $sql->execute([$obj->getTitulo(),$obj->getPath_img(),$obj->getId()]);
+        $sql = $this->pdo->prepare("UPDATE tbDisco SET titulo = ?,banda = ?,ano = ?, path_img = ? WHERE id = ?");
+        $sql->execute([$obj->getTitulo(),$obj->getBanda(),$obj->getAno(),$obj->getPath_img(),$obj->getId()]);
         $sql->closeCursor();
 
     }
@@ -48,20 +53,27 @@ class DiscoDAO extends GenericDAO{
         $sql = $this->pdo->prepare("SELECT * FROM tbDisco ORDER BY id DESC LIMIT :limite");
         $sql->bindValue(":limite",$x,PDO::PARAM_INT);
         $sql->execute();
-        $query = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $fetch = $sql->fetchAll(PDO::FETCH_ASSOC);
         $sql->closeCursor();
 
-        return $query;
+        $fetchObj = [];
+        foreach($fetch as $ar){
+            array_push($fetchObj,Disco::fill($ar));
+        }
+
+        return $fetchObj;
 
     }
     public function searchById($id){
 
         $sql = $this->pdo->prepare("SELECT * FROM tbDisco WHERE id = ? ");
         $sql->execute([$id]);
-        $query = $sql->fetch(PDO::FETCH_ASSOC);
+        $fetch = $sql->fetch(PDO::FETCH_ASSOC);
         $sql->closeCursor();
 
-        return $query;
+        $fetchObj = Disco::fill($fetch);
+
+        return $fetchObj;
     }
 
 }

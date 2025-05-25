@@ -3,7 +3,7 @@
     width: 70vw;
     padding: 3vh 0vw;
     margin: 3vh 0vw 0vh 15vw; 
-    background-color:  black;
+    background-color:  rgb(35, 35, 35);
     color: white;
     text-align: center;
     border-radius: 5px;
@@ -23,6 +23,49 @@
             background-color: rgb(56, 56, 56);
             padding: 5px;
         }
+}
+
+#bandaAno{
+    position: relative;
+    width: 41vw;
+    display: inline-flex;
+    justify-content: space-between;
+    h2{
+        font-size: 18px;
+        text-align: left;
+        width:fit-content;
+    }
+}
+
+#trackList{
+    display: grid;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+
+    h1{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+
+    div{
+        display: inline-flex;
+        width: fit-content;
+        margin: auto;
+        gap: 4px;
+    }
+
+    p{
+        margin: 0.8vh 0;
+        font-size: 18px;
+        opacity: 0.5;
+    }
+
+    h2{
+        margin: 0.8vh 0;
+        font-size: 18px;
+        width: fit-content;
+    }
 }
 
 @font-face {

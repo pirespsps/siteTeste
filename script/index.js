@@ -5,10 +5,10 @@ document.body.querySelectorAll(".disco").forEach(element => {
 
     element.addEventListener("mouseover", (e)=>{
         e.preventDefault();
-        parent.setAttribute("style","background-color:rgb(55,55,55)");
+        parent.setAttribute("style","background-color:rgb(56,56,56)");
     });
     element.addEventListener("mouseleave",(e)=>{
         e.preventDefault();
-        parent.setAttribute("style","background-color:initial");
+        parent.setAttribute("style","background-color:black");
     });
 });

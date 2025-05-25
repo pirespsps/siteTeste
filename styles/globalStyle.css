@@ -1,11 +1,11 @@
 body{
     margin:0;
     padding: 0;
-    background-color: rgb(56, 56, 56);
+    background-color: black;
 }
 
 #headerFundo{
-    background-color: black;
+    background-color: rgb(35, 35, 35);
     color: white;
     max-height: 9.47vh;
         ul{
@@ -90,7 +90,7 @@ body{
 }
 
 .optionHeader:hover{
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(56, 56, 56);
     cursor: pointer;
 }
 

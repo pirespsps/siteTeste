@@ -17,8 +17,7 @@ require_once __DIR__ . "/../global/footer.php";
 function renderCardDisco(){
     $dao = new DiscoDAO(DatabaseAccess::getPDO());
 
-    foreach($dao->readLastX(10) as $fetch){
-        $obj = Disco::fill($fetch);
+    foreach($dao->readLastX(10) as $obj){
         
         $path = str_replace(BASE_URL,"",$obj->getPath_img());
         $nome = ucfirst($obj->getTitulo());
