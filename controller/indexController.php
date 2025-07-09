@@ -7,7 +7,6 @@ require_once __DIR__ . "/../model/disco/Disco.php";
 require_once __DIR__ . "/../model/disco/DiscoDAO.php";
 
 renderHead("Esoteric Order of Dagon","styles/indexStyle.css");
-
 require_once __DIR__ . "/../global/header.php";
 require_once __DIR__ . "/../view/index.php";
 require_once __DIR__ . "/../global/footer.php";

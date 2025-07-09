@@ -1,67 +1,69 @@
-.backgroundCard{
+.backgroundCard {
     height: fit-content;
     width: 70vw;
     padding: 3vh 0vw;
-    margin: 3vh 0vw 0vh 15vw; 
-    background-color:  rgb(35, 35, 35);
+    margin: 3vh 0vw 0vh 15vw;
+    background-color: rgb(35, 35, 35);
     color: white;
     text-align: center;
     border-radius: 5px;
-        h1{
-            margin: 0;
-            font-size: 40px;
-            font-family: metal-gothic;
-            letter-spacing: 0.5px;
-        }
 
-        img{
-            margin-top: 2vh;
-            height: 45vh;
-            width: 40vw;
-            object-fit: fill;
-            border-radius: 2px;
-            background-color: rgb(56, 56, 56);
-            padding: 5px;
-        }
+    h1 {
+        margin: 0;
+        font-size: 40px;
+        font-family: metal-gothic;
+        letter-spacing: 0.5px;
+    }
+
+    img {
+        margin-top: 2vh;
+        height: auto;
+        max-width: 40vw;
+        object-fit: fill;
+        border-radius: 2px;
+        background-color: rgb(56, 56, 56);
+        padding: 5px;
+    }
 }
 
-#bandaAno{
+#bandaAno {
     position: relative;
     width: 41vw;
     display: inline-flex;
     justify-content: space-between;
-    h2{
+
+    h2 {
         font-size: 18px;
         text-align: left;
-        width:fit-content;
+        width: fit-content;
     }
 }
 
-#trackList{
+#trackList {
     display: grid;
     width: fit-content;
     height: fit-content;
     margin: auto;
 
-    h1{
+    h1 {
         font-family: 'Times New Roman', Times, serif;
         font-size: 25px;
     }
 
-    div{
+    div {
         display: inline-flex;
         width: fit-content;
         margin: auto;
         gap: 4px;
     }
 
-    p{
+    p {
         margin: 0.8vh 0;
         font-size: 18px;
         opacity: 0.5;
     }
 
-    h2{
+    h2 {
         margin: 0.8vh 0;
         font-size: 18px;
         width: fit-content;
@@ -71,4 +73,38 @@
 @font-face {
     font-family: metal-gothic;
     src: url(../assets/fonts/metal-gothic-font/MetalGothicDemoVersionRegular-WyB9A.ttf);
+}
+
+#buttons{
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 10vh;
+}
+
+.button{
+    height: 6vh;
+    width: fit-content;
+    margin: 0vh 1.5vw;
+    color: white;
+    background-color: black;
+    border: solid black 1px;
+    border-radius: 5px;
+    font-size: 16.5px;
+    transition: ease-in-out 0.2s;
+
+    img{
+        float: inline-start;
+        margin: auto;
+        padding: 0;
+        padding-right: 1.5px;
+        background-color: inherit;
+        height: 3vh;
+    }
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(55,55,55);
+    border-color: rgb(55,55,55);
 }

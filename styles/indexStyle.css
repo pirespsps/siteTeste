@@ -45,8 +45,6 @@
 
 .disco{
     height: 25vh;
-    width: 11.5vw;
-    max-height: 25vh;
     max-width: 11.5vw;
     object-fit: fill;
     border-radius: 50%;

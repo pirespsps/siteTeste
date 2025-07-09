@@ -1,0 +1,1 @@
+<script type="module" src="lib/jogo/main.js"></script>
